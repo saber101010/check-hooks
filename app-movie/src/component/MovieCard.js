@@ -1,9 +1,13 @@
 import {Card,Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 
 
 
 function MovieCard({movie}){
+
+
+
     return(
         <div>
 <Card style={{ width: '18rem' }}>
@@ -14,7 +18,7 @@ function MovieCard({movie}){
      {movie.description}
     </Card.Text>
     <Card.Text>{"⭐".repeat(movie.rating)}</Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Link to={`/description/${movie.id}`}><Button variant="primary">Go trailer</Button> </Link>
   </Card.Body>
 </Card>
         </div>
